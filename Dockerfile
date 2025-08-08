@@ -33,4 +33,4 @@ COPY . .
 EXPOSE 2026
 
 # Comando por defecto para ejecutar el servidor LangGraph
-CMD ["uv", "run", "langgraph", "dev", "--no-browser", "--host", "0.0.0.0", "--port", "2026"]
+CMD ["uvx", "--refresh", "--from", "langgraph-cli[inmem]", "--with-editable", ".", "--python", "3.11", "langgraph", "dev", "--allow-blocking", "--port", "2026", "--host", "0.0.0.0"]
